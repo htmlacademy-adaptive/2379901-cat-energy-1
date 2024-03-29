@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма</title>
+</head>
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo" href="#">
+      <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Кэт энерджи">
+      <img class="main-header__logo-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toogle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a>
+              Главная
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="program.html">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main-container">
+    <section class="form">
+      <h1 class="visually-hidden">Форма подбора программы</h1>
+      <div class="form__wrapper">
+        <h2 class="form__title">Подбор программы</h2>
+        <p class="form__description">Заполните анкету, и мы подберем
+          программу питания для вашего кота</p>
+        <form class="form__application" action="https://echo.htmlacademy.ru/" method="post">
+          <p>
+            <label class="form__label" for="appointment-name">ИМЯ:*</label>
+            <input class="form__name" type="text" name="appointment-name" id="appointment-name" placeholder="БАРСИК" required>
+          </p>
+          <p>
+            <label class="form__label" for="appointment-weight">Вес (кг):*</label>
+            <input class="form__weight" type="number" name="appointment-weight" id="appointment-weight" placeholder="7" required>
+          </p>
+          <p>
+            <label class="form__label" for="appointment-age">Возраст (лет):</label>
+            <input class="form__age" type="number" name="appointment-age" id="appointment-age" placeholder="7">
+          </p>
+        </form>
+        <fieldset class="form__fiter-group">
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__control">
+                <input class="visually-hidden form__control-input" type="radio" name="purpose" checked>
+                <span class="form__control-mark"></span>
+                <span class="form__control-label">Похудение</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__control">
+                <input class="visually-hidden form__control-input" type="radio" name="purpose">
+                <span class="form__control-mark"></span>
+                <span class="form__control-label">Набор массы</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__control">
+                <input class="visually-hidden form__control-input" type="radio" name="purpose">
+                <span class="form__control-mark"></span>
+                <span class="form__control-label">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <h2 class="form__title">Контактные данные (владельца кота)</h2>
+        <form class="form__contacts" action="https://echo.htmlacademy.ru/" method="post">
+          <p>
+            <label class="form__label" for="appointment-email">E-mail:*</label>
+            <input class="form__email" type="email" name="appointment-email" id="appointment-email" placeholder="kuklachev@gmail.com" required>
+          </p>
+          <p>
+            <label class="form__label" for="appointment-phone">Телефон:*</label>
+            <input class="form__phone" type="phone" name="appointment-phone" id="appointment-phone" placeholder="8 (960) 900-60-90" required>
+          </p>
+        </form>
+        <div class="form__comment-container">
+          <h2 class="form__title">Комментарий</h2>
+          <label class="visually-hidden" for="appointment-comment">Ваш комментарий</label>
+          <input class="form__comment" type="text" name="appointment-comment" id="appointment-comment" placeholder="Расскажите обо всех повадках кота">
+        </div>
+        <fieldset class="form__fiter-group">
+          <h2 class="form__title">Дополнительно</h2>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__control">
+                <input class="visually-hidden form__control-input" type="checkbox" name="sweetener" checked>
+                <span class="form__control-mark"></span>
+                <span class="form__control-label">Cахарозаменитель</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__control">
+                <input class="visually-hidden form__control-input" type="checkbox" name="water">
+                <span class="form__control-mark"></span>
+                <span class="form__control-label">Питьевая вода</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__control">
+                <input class="visually-hidden form__control-input" type="checkbox" name="milk">
+                <span class="form__control-mark"></span>
+                <span class="form__control-label">Молоко</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__control">
+                <input class="visually-hidden form__control-input" type="checkbox" name="vitamins">
+                <span class="form__control-mark"></span>
+                <span class="form__control-label">Витамины</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="form__button">Отправить заявку</button>
+        <p class="form__description">* — Обязательные поля</p>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="main-footer__wrapper">
+      <div class="main-footer__logo">
+        <img class="main-footer__image" src="img/logo-mobile-text.svg" alt="Кэт энерджи">
+      </div>
+      <div class="main-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в ютубе</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в телеграме</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
