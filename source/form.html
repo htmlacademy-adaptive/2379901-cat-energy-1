@@ -6,7 +6,7 @@
 </head>
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo" href="#">
+    <a class="main-header__logo" href="index.html">
       <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Кэт энерджи">
       <img class="main-header__logo-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
     </a>
@@ -42,95 +42,98 @@
         <h2 class="form__title">Подбор программы</h2>
         <p class="form__description">Заполните анкету, и мы подберем
           программу питания для вашего кота</p>
-        <form class="form__application" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="form-application" action="https://echo.htmlacademy.ru/" method="post">
           <p>
-            <label class="form__label" for="appointment-name">ИМЯ:*</label>
-            <input class="form__name" type="text" name="appointment-name" id="appointment-name" placeholder="БАРСИК" required>
+            <label class="form-application__label" for="appointment-name">ИМЯ:*</label>
+            <input class="form-application__name" type="text" name="appointment-name" id="appointment-name" placeholder="БАРСИК" required>
           </p>
           <p>
-            <label class="form__label" for="appointment-weight">Вес (кг):*</label>
-            <input class="form__weight" type="number" name="appointment-weight" id="appointment-weight" placeholder="7" required>
+            <label class="form-application__label" for="appointment-weight">Вес (кг):*</label>
+            <input class="form-application__weight" type="number" name="appointment-weight" id="appointment-weight" placeholder="7" required>
+            <input class="form-application__weight" type="number" name="appointment-weight" id="appointment-weight" placeholder="7" required>
           </p>
           <p>
-            <label class="form__label" for="appointment-age">Возраст (лет):</label>
-            <input class="form__age" type="number" name="appointment-age" id="appointment-age" placeholder="7">
+            <label class="form-application__label" for="appointment-age">Возраст (лет):</label>
+            <input class="form-application__age" type="number" name="appointment-age" id="appointment-age" placeholder="7">
           </p>
         </form>
-        <fieldset class="form__fiter-group">
-          <ul class="form__list">
-            <li class="form__item">
-              <label class="form__control">
-                <input class="visually-hidden form__control-input" type="radio" name="purpose" checked>
-                <span class="form__control-mark"></span>
-                <span class="form__control-label">Похудение</span>
+        <fieldset class="fiter-group">
+          <ul class="fiter-group__list">
+            <li class="fiter-group__item">
+              <label class="fiter-group__control">
+                <input class="visually-hidden fiter-group__control-input" type="radio" name="purpose" checked>
+                <span class="fiter-group__control-mark"></span>
+                <span class="fiter-group__control-label">Похудение</span>
               </label>
             </li>
-            <li class="form__item">
-              <label class="form__control">
-                <input class="visually-hidden form__control-input" type="radio" name="purpose">
-                <span class="form__control-mark"></span>
-                <span class="form__control-label">Набор массы</span>
+            <li class="fiter-group__item">
+              <label class="fiter-group__control">
+                <input class="visually-hidden fiter-group__control-input" type="radio" name="purpose">
+                <span class="fiter-group__control-mark"></span>
+                <span class="fiter-group__control-label">Набор массы</span>
               </label>
             </li>
-            <li class="form__item">
-              <label class="form__control">
-                <input class="visually-hidden form__control-input" type="radio" name="purpose">
-                <span class="form__control-mark"></span>
-                <span class="form__control-label">Не знаю (Нужен ваш совет)</span>
+            <li class="fiter-group__item">
+              <label class="fiter-group__control">
+                <input class="visually-hidden fiter-group__control-input" type="radio" name="purpose">
+                <span class="fiter-group__control-mark"></span>
+                <span class="fiter-group__control-label">Не знаю (Нужен ваш совет)</span>
               </label>
             </li>
           </ul>
         </fieldset>
-        <h2 class="form__title">Контактные данные (владельца кота)</h2>
-        <form class="form__contacts" action="https://echo.htmlacademy.ru/" method="post">
-          <p>
-            <label class="form__label" for="appointment-email">E-mail:*</label>
-            <input class="form__email" type="email" name="appointment-email" id="appointment-email" placeholder="kuklachev@gmail.com" required>
-          </p>
-          <p>
-            <label class="form__label" for="appointment-phone">Телефон:*</label>
-            <input class="form__phone" type="tel" name="appointment-phone" id="appointment-phone" placeholder="8 (960) 900-60-90" required>
-          </p>
-        </form>
-        <div class="form__comment-container">
-          <h2 class="form__title">Комментарий</h2>
-          <label class="visually-hidden" for="appointment-comment">Ваш комментарий</label>
-          <input class="form__comment" type="text" name="appointment-comment" id="appointment-comment" placeholder="Расскажите обо всех повадках кота">
+        <div class="contacts">
+          <h2 class="contacts__title">Контактные данные (владельца кота)</h2>
+          <form class="contacts__form" action="https://echo.htmlacademy.ru/" method="post">
+            <p>
+              <label class="contacts__label" for="appointment-email">E-mail:*</label>
+              <input class="contacts__email" type="email" name="appointment-email" id="appointment-email" placeholder="kuklachev@gmail.com" required>
+            </p>
+            <p>
+              <label class="contacts__label" for="appointment-phone">Телефон:*</label>
+              <input class="contacts__phone" type="tel" name="appointment-phone" id="appointment-phone" placeholder="8 (960) 900-60-90" required>
+            </p>
+          </form>
+          <div class="comment">
+            <h2 class="comment__title">Комментарий</h2>
+            <label class="visually-hidden" for="appointment-comment">Ваш комментарий</label>
+            <textarea class="comment__input" name="appointment-comment" id="appointment-comment" placeholder="Расскажите обо всех повадках кота" cols="30" rows="10"></textarea>
+          </div>
         </div>
-        <fieldset class="form__fiter-group">
-          <h2 class="form__title">Дополнительно</h2>
-          <ul class="form__list">
-            <li class="form__item">
-              <label class="form__control">
-                <input class="visually-hidden form__control-input" type="checkbox" name="sweetener" checked>
-                <span class="form__control-mark"></span>
-                <span class="form__control-label">Cахарозаменитель</span>
+        <fieldset class="fiter-group">
+          <h2 class="fiter-group__title">Дополнительно</h2>
+          <ul class="fiter-group__list">
+            <li class="fiter-group__item">
+              <label class="fiter-group__control">
+                <input class="visually-hidden fiter-group__control-input" type="checkbox" name="sweetener" checked>
+                <span class="fiter-group__control-mark"></span>
+                <span class="fiter-group__control-label">Cахарозаменитель</span>
               </label>
             </li>
-            <li class="form__item">
-              <label class="form__control">
-                <input class="visually-hidden form__control-input" type="checkbox" name="water">
-                <span class="form__control-mark"></span>
-                <span class="form__control-label">Питьевая вода</span>
+            <li class="fiter-group__item">
+              <label class="fiter-group__control">
+                <input class="visually-hidden fiter-group__control-input" type="checkbox" name="water">
+                <span class="fiter-group__control-mark"></span>
+                <span class="fiter-group__control-label">Питьевая вода</span>
               </label>
             </li>
-            <li class="form__item">
-              <label class="form__control">
-                <input class="visually-hidden form__control-input" type="checkbox" name="milk">
-                <span class="form__control-mark"></span>
-                <span class="form__control-label">Молоко</span>
+            <li class="fiter-group__item">
+              <label class="fiter-group__control">
+                <input class="visually-hidden fiter-group__control-input" type="checkbox" name="milk">
+                <span class="fiter-group__control-mark"></span>
+                <span class="fiter-group__control-label">Молоко</span>
               </label>
             </li>
-            <li class="form__item">
-              <label class="form__control">
-                <input class="visually-hidden form__control-input" type="checkbox" name="vitamins">
-                <span class="form__control-mark"></span>
-                <span class="form__control-label">Витамины</span>
+            <li class="fiter-group__item">
+              <label class="fiter-group__control">
+                <input class="visually-hidden fiter-group__control-input" type="checkbox" name="vitamins">
+                <span class="fiter-group__control-mark"></span>
+                <span class="fiter-group__control-label">Витамины</span>
               </label>
             </li>
           </ul>
         </fieldset>
-        <button class="form__button">Отправить заявку</button>
+        <button class="button button--green" type="submit">Отправить заявку</button>
         <p class="form__description">* — Обязательные поля</p>
       </div>
     </section>
