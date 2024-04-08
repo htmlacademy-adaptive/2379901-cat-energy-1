@@ -4,6 +4,14 @@
   list-style-type: none;
 }
 
+.work__item {
+  display: grid;
+  grid-template-columns: repeat(2, 50px);
+  gap: 20px;
+}
+
 .work__text {
+  width: 200px;
   margin-bottom: 24px;
+  margin-left: 20px;
 }
