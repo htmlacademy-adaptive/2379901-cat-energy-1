@@ -1,1 +1,46 @@
-// Начните писать стили здесь
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@import "./blocks/page-header.scss";
+@import "./blocks/page__body.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/button.scss";
+@import "./blocks/purpose.scss";
+@import "./blocks/title.scss";
+@import "./blocks/description.scss";
+@import "./blocks/example.scss";
+@import "./blocks/work.scss";
+@import "./blocks/contacts.scss"

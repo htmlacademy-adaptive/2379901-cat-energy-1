@@ -1,0 +1,25 @@
+.contacts__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacts__title {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #111111;
+  width: 140px;
+  padding-left: 20px;
+}
+
+.contacts__adress {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #444444;
+  width: 140px;
+}
