@@ -1,0 +1,493 @@
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-header {
+  display: block;
+  margin: 0 auto;
+}
+
+.page-header__logo-image {
+  margin-left: 20px;
+  margin-top: 13px;
+  margin-bottom: 14px;
+}
+
+.page-header__logo-text {
+  margin-left: 56px;
+  margin-top: 23px;
+  margin-bottom: 24px;
+}
+
+.page__body {
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.main-nav__toogle {
+  margin: 0;
+  padding: 0;
+  margin-left: 65px;
+  width: 24px;
+  height: 24px;
+  margin-top: 20px;
+  margin-bottom: 21px;
+}
+
+.main-nav__item {
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__link {
+  display: block;
+  font-family: "Oswald";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 22px;
+}
+
+.main-header {
+  display: block;
+  background: url("../img/index-background-color.png"), url("../img/index-background.jpg");
+  width: 320px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.main-header__title {
+  font-family: "Oswald";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  padding-top: 27px;
+  color: #ffffff;
+}
+
+.main-header__text {
+  font-family: "Oswald";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.main-header__image {
+  width: 280px;
+  margin-top: 25px;
+}
+
+.button {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  padding: 10px 64px;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.button--green {
+  background-color: #68B738;
+}
+
+.purpose__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.purpose__item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  background-color: #F2F2F2;
+}
+
+.purpose__title {
+  font-family: "Oswald";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  padding-top: 30px;
+}
+
+.purpose__image {
+  padding-top: 21px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.purpose__description {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #444444;
+  margin-top: 29px;
+  margin-right: 33px;
+  margin-left: 20px;
+}
+
+.purpose__button {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 20px;
+  padding-bottom: 18px;
+}
+
+.title {
+  font-family: "Oswald";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  color: #000000;
+}
+
+.description {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #444444;
+}
+
+.example__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.example__list__title {
+  font-family: "Oswald";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+
+.example__list__description {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #444444;
+}
+
+.example__description--result {
+  font-family: "Oswald";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.work__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.work__item {
+  display: grid;
+  grid-template-columns: repeat(2, 50px);
+  gap: 20px;
+}
+
+.work__text {
+  width: 200px;
+  margin-bottom: 24px;
+  margin-left: 20px;
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 26px 20px;
+}
+
+.contacts__title {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #111111;
+  width: 140px;
+}
+
+.contacts__adress {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #444444;
+  width: 140px;
+}
+
+.main-footer__wrapper {
+  display: block;
+  margin: 0 auto;
+}
+
+.social__list {
+  list-style-type: none;
+}
+
+.main-footer__image {
+  margin-top: 40px;
+}
+
+.form__title {
+  font-family: "Oswald";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+  color: #000000;
+  padding-top: 27px;
+  text-align: center;
+}
+
+.form__description {
+  font-family: "Oswald";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #000000;
+}
+
+.form-application__label,
+.form-application {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #444444;
+  text-transform: uppercase;
+  margin-right: 13px;
+}
+
+.fiter-group__list {
+  list-style-type: none;
+}
+
+.fiter-group__control-label {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #444444;
+  text-transform: uppercase;
+}
+
+.fiter-group__control-input {
+  margin-bottom: 13px;
+}
+
+.main-title {
+  font-family: "Oswald";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: #000000;
+}
+
+.main-contacts__label,
+.main-contacts__input {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #444444;
+  text-transform: uppercase;
+  margin-right: 13px;
+}
+
+.catalog__title-main {
+  font-family: "Oswald";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+  color: #000000;
+  margin-top: 27px;
+  margin-bottom: 41px;
+}
+
+.catalog__title {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #222222;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.catalog__products-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__description {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  color: #444444;
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+}
+
+.catalog__products-title {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.catalog__products-description {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  color: #444444;
+  margin-bottom: 21px;
+}
+
+.button--gray {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+  background-color: #f2f2f2;
+}
+
+.more__title-main {
+  font-family: "Oswald";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+
+.more__list {
+  list-style-type: none;
+}
+
+.more__title {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.more__description {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: center;
+  color: #444444;
+}
+
+.gift__description {
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #68b738;
+  background-repeat: no-repeat;
+  width: 280px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 189px;
+  padding-bottom: 43px;
+  background: url("../img/catalog/catalog-background.png"), url("../img/catalog/catalog-cat.jpg");
+}
+/*# sourceMappingURL=style.css.map */
