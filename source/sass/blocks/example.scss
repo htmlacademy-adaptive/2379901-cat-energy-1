@@ -5,8 +5,8 @@
   list-style-type: none;
 }
 
-.example__list__title {
-  font-family: "Oswald";
+.example__list-title {
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
@@ -14,8 +14,8 @@
   color: #000000;
 }
 
-.example__list__description {
-  font-family: "Lato";
+.example__list-description {
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
@@ -24,7 +24,7 @@
 }
 
 .example__description--result {
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
