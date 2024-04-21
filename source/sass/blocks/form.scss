@@ -16,7 +16,21 @@
   line-height: 18px;
   text-align: left;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 60px;
+  }
 }
 
+.form__button-container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
 
-
+.form__content-container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-around;
+  }
+}

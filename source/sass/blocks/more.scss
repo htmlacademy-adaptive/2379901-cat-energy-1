@@ -29,3 +29,19 @@
   text-align: center;
   color: #444444;
 }
+
+.more__item {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 896px;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+}
+
+.more__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
