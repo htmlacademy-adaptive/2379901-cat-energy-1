@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 153px 37px;
-
+    counter-reset: number;
   }
 
   @media (min-width: $desktop-width) {
@@ -31,57 +31,10 @@
   }
 }
 
-.work__item:nth-child(1):after {
+.work__item:after {
   @media (min-width: $tablet-width) {
-    content: "1";
-    right: 0;
-    top: 0;
-    position: absolute;
-    font-family: "Oswald";
-    font-size: 280px;
-    font-weight: 400;
-    line-height: 280px;
-    text-align: center;
-    color: #f2f2f2;
-    z-index: -1;
-  }
-}
-
-.work__item:nth-child(2):after {
-  @media (min-width: $tablet-width) {
-    content: "2";
-    right: 0;
-    top: 0;
-    position: absolute;
-    font-family: "Oswald";
-    font-size: 280px;
-    font-weight: 400;
-    line-height: 280px;
-    text-align: center;
-    color: #f2f2f2;
-    z-index: -1;
-  }
-}
-
-.work__item:nth-child(3):after {
-  @media (min-width: $tablet-width) {
-    content: "3";
-    right: 0;
-    top: 0;
-    position: absolute;
-    font-family: "Oswald";
-    font-size: 280px;
-    font-weight: 400;
-    line-height: 280px;
-    text-align: center;
-    color: #f2f2f2;
-    z-index: -1;
-  }
-}
-
-.work__item:nth-child(4):after {
-  @media (min-width: $tablet-width) {
-    content: "4";
+    counter-increment: number 1;
+    content: counter(number);
     right: 0;
     top: 0;
     position: absolute;

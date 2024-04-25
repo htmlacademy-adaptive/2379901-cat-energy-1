@@ -14,9 +14,12 @@
 }
 
 .main-header {
-  display: block;
-  background: url("../img/index-background.jpg");
-  width: 320px;
+  background-image: url("../img/index-background.jpg"),
+                    linear-gradient(180deg, #64a83b 62.4%, #fff 62.4%);
+  background-size: 320px 305px, 100%;
+  background-position: top center;
+  color: #ffffff;
+  text-align: center;
   background-repeat: no-repeat;
   margin: 0 auto;
 
@@ -25,8 +28,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
     background-position: right;
+    background-position: calc(50% + 360px) center,center;
+    background-image: url("../img/index-background.jpg"),
+                      linear-gradient(90deg, #fff 50%, #64a83b 50%);
   }
 }
 
