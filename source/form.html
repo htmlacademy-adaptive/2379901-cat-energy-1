@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <title>Форма</title>
 </head>
+
 <body class="page-body">
   <header class="page-header">
     <a class="page-header__logo">
@@ -38,109 +40,117 @@
     </nav>
   </header>
   <main class="main-container">
-    <section class="form">
-      <h1 class="visually-hidden">Форма подбора программы</h1>
-      <div class="form__wrapper">
-        <h2 class="form__title">Подбор программы</h2>
-        <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <div class="form__content-container">
-          <form class="form-application" action="https://echo.htmlacademy.ru/" method="post">
-            <p>
-              <label class="form-application__label" for="appointment-name">ИМЯ:*</label>
-              <input class="form-application__name form__input" type="text" name="appointment-name" id="appointment-name" placeholder="БАРСИК" required>
-            </p>
-            <p>
-              <label class="form-application__label" for="appointment-weight">Вес (кг):*</label>
-              <input class="form-application__weight form__input" type="number" name="appointment-weight" id="appointment-weight" placeholder="7" required>
-            </p>
-            <p>
-              <label class="form-application__label" for="appointment-age">Возраст (лет):</label>
-              <input class="form-application__age form__input" type="number" name="appointment-age" id="appointment-age" placeholder="7">
-            </p>
-          </form>
+    <form class="main-contacts__form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="content-wrapper">
+        <section class="form">
+          <h1 class="visually-hidden">Форма подбора программы</h1>
+          <div class="form__wrapper">
+            <h2 class="form__title">Подбор программы</h2>
+            <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+            <div class="form__content-container">
+              <fieldset class="form-application" action="https://echo.htmlacademy.ru/" method="post">
+                <p>
+                  <label class="form-application__label" for="appointment-name">ИМЯ:*</label>
+                  <input class="form-application__name form__input" type="text" name="appointment-name"
+                    id="appointment-name" placeholder="БАРСИК" required>
+                </p>
+                <p>
+                  <label class="form-application__label" for="appointment-weight">Вес (кг):*</label>
+                  <input class="form-application__weight form__input" type="number" name="appointment-weight"
+                    id="appointment-weight" placeholder="7" required>
+                </p>
+                <p>
+                  <label class="form-application__label" for="appointment-age">Возраст (лет):</label>
+                  <input class="form-application__age form__input" type="number" name="appointment-age"
+                    id="appointment-age" placeholder="7">
+                </p>
+              </fieldset>
+              <fieldset class="fiter-group">
+                <ul class="fiter-group__list">
+                  <li class="fiter-group__item">
+                    <label class="fiter-group__control">
+                      <input class="fiter-group__control-input visually-hidden" type="radio" name="purpose" checked>
+                      <span class="fiter-group__control-mark"></span>
+                      <span class="fiter-group__control-label">Похудение</span>
+                    </label>
+                  </li>
+                  <li class="fiter-group__item">
+                    <label class="fiter-group__control">
+                      <input class="fiter-group__control-input visually-hidden" type="radio" name="purpose">
+                      <span class="fiter-group__control-mark"></span>
+                      <span class="fiter-group__control-label">Набор массы</span>
+                    </label>
+                  </li>
+                  <li class="fiter-group__item">
+                    <label class="fiter-group__control">
+                      <input class="fiter-group__control-input visually-hidden" type="radio" name="purpose">
+                      <span class="fiter-group__control-mark"></span>
+                      <span class="fiter-group__control-label">Не знаю (Нужен ваш совет)</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <h2 class="main-contacts__title main-title">Контактные данные (владельца кота)</h2>
+            <fieldset class="main-contacts__form" action="https://echo.htmlacademy.ru/" method="post">
+              <p>
+                <label class="main-contacts__label" for="appointment-email">E-mail:*</label>
+                <input class="main-contacts__email main-contacts__input" type="email" name="appointment-email"
+                  id="appointment-email" placeholder="kuklachev@gmail.com" required>
+              </p>
+              <p>
+                <label class="main-contacts__label" for="appointment-phone">Телефон:*</label>
+                <input class="main-contacts__phone main-contacts__input" type="tel" name="appointment-phone"
+                  id="appointment-phone" placeholder="8 (960) 900-60-90" required>
+              </p>
+            </fieldset>
+            <div class="comment">
+              <h2 class="comment__title main-title">Комментарий</h2>
+              <label class="visually-hidden" for="appointment-comment">Ваш комментарий</label>
+              <textarea class="comment__input main-contacts__input" name="appointment-comment" id="appointment-comment"
+                placeholder="Расскажите обо всех повадках кота" cols="30" rows="10"></textarea>
+            </div>
+          </div>
           <fieldset class="fiter-group">
-            <ul class="fiter-group__list">
+            <h2 class="fiter-group__title main-title">Дополнительно</h2>
+            <ul class="fiter-group__list fiter-group__list-additionally">
               <li class="fiter-group__item">
                 <label class="fiter-group__control">
-                  <input class="fiter-group__control-input visually-hidden" type="radio" name="purpose" checked>
+                  <input class="fiter-group__control-input visually-hidden" type="checkbox" name="sweetener" checked>
                   <span class="fiter-group__control-mark"></span>
-                  <span class="fiter-group__control-label">Похудение</span>
+                  <span class="fiter-group__control-label">Cахарозаменитель</span>
                 </label>
               </li>
               <li class="fiter-group__item">
                 <label class="fiter-group__control">
-                  <input class="fiter-group__control-input visually-hidden" type="radio" name="purpose">
+                  <input class="fiter-group__control-input visually-hidden" type="checkbox" name="water">
                   <span class="fiter-group__control-mark"></span>
-                  <span class="fiter-group__control-label">Набор массы</span>
+                  <span class="fiter-group__control-label">Питьевая вода</span>
                 </label>
               </li>
               <li class="fiter-group__item">
                 <label class="fiter-group__control">
-                  <input class="fiter-group__control-input visually-hidden" type="radio" name="purpose">
+                  <input class="fiter-group__control-input visually-hidden" type="checkbox" name="milk">
                   <span class="fiter-group__control-mark"></span>
-                  <span class="fiter-group__control-label">Не знаю (Нужен ваш совет)</span>
+                  <span class="fiter-group__control-label">Молоко</span>
+                </label>
+              </li>
+              <li class="fiter-group__item">
+                <label class="fiter-group__control">
+                  <input class="fiter-group__control-input visually-hidden" type="checkbox" name="vitamins">
+                  <span class="fiter-group__control-mark"></span>
+                  <span class="fiter-group__control-label">Витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-        </div>
-        <div class="main-contacts">
-          <h2 class="main-contacts__title main-title">Контактные данные (владельца кота)</h2>
-          <form class="main-contacts__form" action="https://echo.htmlacademy.ru/" method="post">
-            <p>
-              <label class="main-contacts__label" for="appointment-email">E-mail:*</label>
-              <input class="main-contacts__email main-contacts__input" type="email" name="appointment-email" id="appointment-email" placeholder="kuklachev@gmail.com" required>
-            </p>
-            <p>
-              <label class="main-contacts__label" for="appointment-phone">Телефон:*</label>
-              <input class="main-contacts__phone main-contacts__input" type="tel" name="appointment-phone" id="appointment-phone" placeholder="8 (960) 900-60-90" required>
-            </p>
-          </form>
-          <div class="comment">
-            <h2 class="comment__title main-title">Комментарий</h2>
-            <label class="visually-hidden" for="appointment-comment">Ваш комментарий</label>
-            <textarea class="comment__input main-contacts__input" name="appointment-comment" id="appointment-comment" placeholder="Расскажите обо всех повадках кота" cols="30" rows="10"></textarea>
+          <div class="form__button-container">
+            <button class="button button--green" type="submit">Отправить заявку</button>
+            <p class="form__description">* — Обязательные поля</p>
           </div>
-        </div>
-        <fieldset class="fiter-group">
-          <h2 class="fiter-group__title main-title">Дополнительно</h2>
-          <ul class="fiter-group__list fiter-group__list-additionally">
-            <li class="fiter-group__item">
-              <label class="fiter-group__control">
-                <input class="fiter-group__control-input visually-hidden" type="checkbox" name="sweetener" checked>
-                <span class="fiter-group__control-mark"></span>
-                <span class="fiter-group__control-label">Cахарозаменитель</span>
-              </label>
-            </li>
-            <li class="fiter-group__item">
-              <label class="fiter-group__control">
-                <input class="fiter-group__control-input visually-hidden" type="checkbox" name="water">
-                <span class="fiter-group__control-mark"></span>
-                <span class="fiter-group__control-label">Питьевая вода</span>
-              </label>
-            </li>
-            <li class="fiter-group__item">
-              <label class="fiter-group__control">
-                <input class="fiter-group__control-input visually-hidden" type="checkbox" name="milk">
-                <span class="fiter-group__control-mark"></span>
-                <span class="fiter-group__control-label">Молоко</span>
-              </label>
-            </li>
-            <li class="fiter-group__item">
-              <label class="fiter-group__control">
-                <input class="fiter-group__control-input visually-hidden" type="checkbox" name="vitamins">
-                <span class="fiter-group__control-mark"></span>
-                <span class="fiter-group__control-label">Витамины</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <div class="form__button-container">
-          <button class="button button--green" type="submit">Отправить заявку</button>
-          <p class="form__description">* — Обязательные поля</p>
-        </div>
+        </section>
       </div>
-    </section>
+    </form>
     <section class="contacts">
       <h2 class="visually-hidden">Сотрудничество с нами</h2>
       <div class="contacts__wrapper">
@@ -161,7 +171,8 @@
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы вконтакте</a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в ютубе</a>
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в
+              ютубе</a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в телеграме</a>
@@ -174,4 +185,5 @@
     </div>
   </footer>
 </body>
+
 </html>
