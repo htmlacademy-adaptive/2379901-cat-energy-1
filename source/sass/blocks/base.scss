@@ -24,10 +24,7 @@ body {
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
     width: 1220px;
     padding: 0 40px;
-    grid-template-columns: repeat(2, 570px);
-    column-gap: 80px;
   }
 }

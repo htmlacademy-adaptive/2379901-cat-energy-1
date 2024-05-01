@@ -1,0 +1,77 @@
+.form-feedback__content-wrapper {
+  display: block;
+
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    width: 1220px;
+    padding: 0 40px;
+    grid-template-columns: repeat(2, 570px);
+    column-gap: 80px;
+  }
+}
+
+.form-feedback__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+  color: #000000;
+  padding-top: 27px;
+  text-align: center;
+}
+
+.form-feedback__description {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #000000;
+}
+
+.form-feedback_button-container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.form-feedback__label,
+.form-feedback__input {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #444444;
+  text-transform: uppercase;
+  margin-right: 13px;
+}
+
+.form-feedback__contacts {
+  @media (min-width: $desktop-width) {
+    grid-column: span 2;
+  }
+}
+
+.form-feedback__comments {
+  @media (min-width: $desktop-width) {
+    grid-column: span 2;
+  }
+}
+
+.form-feedback__additional {
+  @media (min-width: $desktop-width) {
+    grid-column: span 2;
+  }
+}
