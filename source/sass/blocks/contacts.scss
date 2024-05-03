@@ -1,7 +1,8 @@
 .contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin: 26px 20px;
+  justify-content: space-around;
+  margin: 0 auto;
 }
 
 .contacts__title {
@@ -22,4 +23,9 @@
   text-align: left;
   color: #444444;
   width: 140px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }
+

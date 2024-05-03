@@ -9,3 +9,9 @@
   text-transform: uppercase;
   margin-right: 13px;
 }
+
+.main-contacts__form {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}

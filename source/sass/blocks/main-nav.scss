@@ -6,6 +6,10 @@
   height: 24px;
   margin-top: 20px;
   margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__item {
@@ -25,4 +29,15 @@
   text-transform: uppercase;
   text-decoration: none;
   margin-top: 22px;
+}
+
+.main-nav__wrapper {
+  @media (min-width: $tablet-width) {
+    width: 436px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 475px;
+    margin-left: auto;
+  }
 }
