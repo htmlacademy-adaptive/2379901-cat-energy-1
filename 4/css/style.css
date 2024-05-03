@@ -748,21 +748,10 @@ body {
 
 .form-feedback__content-wrapper {
   display: block;
-  width: 280px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-@media (min-width: 768px) {
-  .form-feedback__content-wrapper {
-    width: 708px;
-    padding: 0 30px;
-  }
 }
 @media (min-width: 1300px) {
   .form-feedback__content-wrapper {
     display: grid;
-    width: 1220px;
-    padding: 0 40px;
     grid-template-columns: repeat(2, 570px);
     column-gap: 80px;
   }
