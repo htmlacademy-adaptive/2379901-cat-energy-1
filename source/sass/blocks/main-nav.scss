@@ -1,22 +1,100 @@
+.main-nav {
+  position: relative;
+  width: auto;
+  min-height: 64px;
+}
+
 .main-nav__toogle {
-  margin: 0;
-  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  margin: 20px 0 0 ;
   margin-left: 65px;
-  width: 24px;
-  height: 24px;
-  margin-top: 20px;
-  margin-bottom: 21px;
+  width: 70px;
+  height: 64px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+
+  &:hover,
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.main-nav__logo-wrapper {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+.main-nav--closed.main-nav__toogle::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--closed.main-nav__toggle:active::before {
+  background-color: fade(#000000, 30%);
+  box-shadow:
+    0 8px 0 0 fade(#000000, 30%),
+    0 16px 0 0 fade(#000000, 30%);
+}
+
+.main-nav--opened.main-nav__toogle {
+  top: 0;
+  left: auto;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 18px;
+    width: 25px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#000000, 30%);
+  }
+}
+
+.main-nav__list {
+  padding: 0;
+}
+
 .main-nav__item {
+  display: block;
   align-items: center;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 22px;
+  border-top: 1px solid #e6e6e6;
 }
 
 .main-nav__link {
@@ -28,7 +106,6 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  margin-top: 22px;
 }
 
 .main-nav__wrapper {
@@ -39,5 +116,11 @@
   @media (min-width: $desktop-width) {
     width: 475px;
     margin-left: auto;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed.main-nav__item {
+    display: none;
   }
 }

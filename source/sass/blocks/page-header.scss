@@ -3,15 +3,28 @@
   margin: 0 auto;
 }
 
-.page-header__logo-image {
-  margin-left: 20px;
-  margin-top: 13px;
-  margin-bottom: 14px;
+.page-header__logo {
+  text-decoration: none;
 }
 
 .page-header__logo-text {
   margin-left: 56px;
-  margin-top: 23px;
-  margin-bottom: 24px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
+.page-header__logo-image {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

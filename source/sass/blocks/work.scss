@@ -50,6 +50,8 @@
   width: 200px;
   margin-bottom: 24px;
   margin-left: 20px;
+  position: relative;
+  padding-left: 50px;
 }
 
 .work__image {
@@ -61,4 +63,50 @@
   @media (min-width: $tablet-width) {
     margin-left: 30px;
   }
+}
+
+.work__title {
+  text-align: left;
+}
+
+.description-one::before {
+  content: url("../img/work-1.svg");
+  position: absolute;
+  top: 15px;
+  left: -3px;
+  z-index: 1;
+}
+
+.description-two::before {
+  content: url("../img/work-2.svg");
+  position: absolute;
+  top: 15px;
+  left: -3px;
+  z-index: 1;
+}
+
+.description-three::before {
+  content: url("../img/work-3.svg");
+  position: absolute;
+  top: 15px;
+  left: -3px;
+  z-index: 1;
+}
+
+.description-four::before {
+  content: url("../img/work-4.svg");
+  position: absolute;
+  top: 15px;
+  left: -3px;
+  z-index: 1;
+}
+
+.work__text::after {
+  content: "";
+  position: absolute;
+  background-color: #68b738;
+  width: 60px;
+  height: 60px;
+  top: -2px;
+  left: -20px;
 }
