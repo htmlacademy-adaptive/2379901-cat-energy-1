@@ -1,0 +1,21 @@
+.copyright__icon {
+  fill: #666666;
+}
+
+.copyright__link {
+  &:hover .copyright__icon {
+    fill: #68b738;
+  }
+
+  &:active .copyright__icon {
+    fill: #68b738;
+    opacity: 0.3;
+  }
+
+}
+
+.copyright__icon-text {
+  @media (min-width: $tablet-width) {
+    padding-right: 23px;
+  }
+}

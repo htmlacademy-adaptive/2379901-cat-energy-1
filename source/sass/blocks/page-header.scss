@@ -28,3 +28,12 @@
     opacity: 0.3;
   }
 }
+
+.page-header__container {
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}

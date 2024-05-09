@@ -3,16 +3,21 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+     padding: 60px 70px;
+  }
 }
 
 .contacts__title {
-  font-family: "Oswald" , "Arial", sans-serif;
+  font-family: "Oswald Regular" , "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-align: left;
   color: #111111;
   width: 140px;
+  text-transform: uppercase;
 }
 
 .contacts__adress {
@@ -29,3 +34,8 @@
   }
 }
 
+.contacts iframe {
+  margin: 0 auto;
+  border: none;
+  display: block;
+}

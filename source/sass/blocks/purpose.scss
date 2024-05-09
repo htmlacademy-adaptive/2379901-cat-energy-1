@@ -14,11 +14,12 @@
   margin: 0;
   padding: 0;
   background-color: #F2F2F2;
-  min-height: 266px;
+  padding-bottom: 18px;
 
   @media (min-width: $tablet-width) {
-    width: 708px;
+
     margin-top: 30px;
+    padding: 53px 77px;
   }
 }
 
@@ -33,10 +34,20 @@
   padding-top: 30px;
   position: relative;
   padding-left: 50px;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .slim {
   padding-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .slim::before {
@@ -45,6 +56,10 @@
   top: 21px;
   right: 220px;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    right: 65px;
+  }
 }
 
 .slim::after {
@@ -56,6 +71,10 @@
   border-radius: 50%;
   top: 23px;
   left: 20px;
+
+  @media (min-width: $tablet-width) {
+    left: 445px;
+  }
 }
 
 .pro::before {
@@ -64,6 +83,10 @@
   top: 35px;
   right: 200px;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    right: 45px;
+  }
 }
 
 .pro::after {
@@ -75,6 +98,10 @@
   border-radius: 50%;
   top: 23px;
   left: 20px;
+
+  @media (min-width: $tablet-width) {
+    left: 455px;
+  }
 }
 
 .purpose__image {
@@ -101,6 +128,11 @@
   margin-left: 20px;
   position: relative;
   padding-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    margin-left: 0;
+  }
 }
 
 .purpose__description::before {
@@ -110,6 +142,10 @@
   height: 1px;
   top: 110px;
   position: absolute;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .purpose__button {
@@ -123,6 +159,21 @@
   text-decoration: none;
   margin-left: 20px;
   position: relative;
+
+  &:hover::after {
+    content: url("../img/purpose-icon-hover.svg");
+    position: absolute;
+    right: -48px;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
 }
 
 .purpose__button::after {
@@ -136,6 +187,4 @@
     margin-left: 30px;
     margin-top: 100px;
   }
-
-
 }
