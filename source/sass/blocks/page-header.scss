@@ -1,6 +1,13 @@
 .page-header {
   display: block;
   margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/index-background.jpg"),
+                      linear-gradient(90deg, #fff 50%, #64a83b 50%);
+    background-position: calc(50% + 360px) center,center;
+    background-repeat: no-repeat;
+  }
 }
 
 .page-header__logo {

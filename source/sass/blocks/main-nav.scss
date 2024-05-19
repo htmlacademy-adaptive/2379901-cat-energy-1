@@ -116,7 +116,7 @@
 
 .main-nav__link {
   display: block;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;
@@ -141,6 +141,10 @@
     line-height: 24px;
     text-align: left;
   }
+
+  @media (min-width: $desktop-width) {
+    color: #ffffff;
+  }
 }
 
 .main-nav__item--active .main-nav__link {
@@ -153,6 +157,12 @@
       background-color: #68b738;
       bottom: -10px;
       left: 0;
+    }
+  }
+
+  @media  (min-width: $desktop-width) {
+    &::after {
+      background-color: #ffffff;
     }
   }
 }

@@ -29,6 +29,10 @@
     display: flex;
     padding-bottom: 99px;
   }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: wrap;
+  }
 }
 
 .example__list-title {
@@ -83,6 +87,13 @@
     width: 134px;
     text-align: right;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-top: 55px;
+    text-align: left;
+    width: 250px;
+  }
 }
 
 .example__item {
@@ -109,5 +120,9 @@
     min-height: 317px;
     align-items: center;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 436px;
   }
 }

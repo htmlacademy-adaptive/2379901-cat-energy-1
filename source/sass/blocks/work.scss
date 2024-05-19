@@ -74,6 +74,10 @@
 
 .work__title {
   text-align: left;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 32px;
+  }
 }
 
 .description-one::before {

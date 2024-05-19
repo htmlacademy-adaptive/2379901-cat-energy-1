@@ -9,9 +9,11 @@
   display: block;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 
   &--green {
     background-color: #68B738;
+    border: none;
 
     &:hover {
       background-color: #5eaa2f;
