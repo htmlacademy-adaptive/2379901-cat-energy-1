@@ -9,6 +9,7 @@
 
 .more__list {
   list-style-type: none;
+  padding: 0;
 }
 
 .more__title {
@@ -44,4 +45,9 @@
     display: flex;
     justify-content: space-around;
   }
+}
+
+.more__description-container {
+  display: flex;
+  justify-content: space-between;
 }

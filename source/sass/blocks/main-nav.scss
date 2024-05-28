@@ -2,6 +2,15 @@
   position: relative;
   width: auto;
   min-height: 64px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+  }
 }
 
 .main-nav__toogle {
@@ -10,8 +19,7 @@
   right: 0;
   z-index: 1;
   display: block;
-  margin: 20px 0 0 ;
-  margin-left: 65px;
+  margin: 35px -55px 0 ;
   width: 70px;
   height: 64px;
   cursor: pointer;
@@ -35,8 +43,9 @@
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    padding-top: 49px;
-    margin-left: 0;
+    padding-top: 29px;
+    width: 174px;
+    margin: 0;
   }
 }
 

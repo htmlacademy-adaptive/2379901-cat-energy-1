@@ -57,6 +57,11 @@
   border: 1px solid #cdcdcd;
   top: -8px;
   left: -40px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #bababa;
+  }
 }
 
 .fiter-group__control-input[type="checkbox"]:checked + .fiter-group__control-mark::before{
