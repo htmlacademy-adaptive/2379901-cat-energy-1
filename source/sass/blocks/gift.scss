@@ -10,6 +10,10 @@
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
                     url("../img/catalog/catalog-cat.jpg");
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 100%;
+  }
+
 }
 
 .gift__description {
@@ -28,5 +32,19 @@
     position: absolute;
     top: 59px;
     left: 35%;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      top: 0;
+      left: 77px;
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    position: absolute;
+    margin: 0;
+    width: 161px;
+    padding-left: 421px;
+    text-align: left;
+    top: 80px;
   }
 }

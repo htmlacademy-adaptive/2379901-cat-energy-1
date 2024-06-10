@@ -42,7 +42,7 @@
     align-items: center;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     width: 245px;
   }
 }
@@ -78,7 +78,7 @@
   grid-template-columns: repeat(2, 80px);
 
   @media (min-width: $tablet-width) {
-    width: 315px;
+    width: 100%;
     justify-content: space-between;
     gap: 10px;
   }
@@ -115,7 +115,11 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(4, 245px);
+    width: 245px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 143px;
+    margin: 0;
   }
 }
 
@@ -127,7 +131,7 @@
 
 .catalog__weight {
   text-align: left;
-  width: 315px;
+  width: 245px;
 
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid #cdcdcd;

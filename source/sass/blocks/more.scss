@@ -33,6 +33,10 @@
     padding: 27px 38px;
     border: 1px solid #cdcdcd;
   }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+  }
 }
 
 .more__title {
@@ -65,6 +69,12 @@
     justify-content: space-between;
     margin-bottom: 32px;
   }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    border-top: 1px solid #cdcdcd;
+    justify-content: space-between;
+  }
 }
 
 .more__container {
@@ -77,4 +87,11 @@
 .more__description-container {
   display: flex;
   justify-content: space-between;
+}
+
+.more__content-container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+
+  }
 }
