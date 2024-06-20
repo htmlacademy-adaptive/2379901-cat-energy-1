@@ -1,4 +1,4 @@
-.page-header {
+.header-index {
   display: block;
   margin: 0 auto;
 
@@ -12,6 +12,11 @@
 
 .page-header__logo {
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-top: 25px;
+  }
 }
 
 .page-header__logo-text {
@@ -27,6 +32,7 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 13px;
+    margin-top: 13px;
   }
 }
 
@@ -41,7 +47,7 @@
 }
 
 .page-header__container {
-  padding: 0;
+  padding-top: 13px;
 
   @media (min-width: $tablet-width) {
     display: flex;
