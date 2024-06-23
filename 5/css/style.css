@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Oswald Regular";
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
@@ -8,7 +8,7 @@
 @font-face {
   font-family: "Oswald";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2");
   font-display: swap;
 }
@@ -52,12 +52,12 @@ body {
   }
 }
 
-.page-header {
+.header-index {
   display: block;
   margin: 0 auto;
 }
 @media (min-width: 1300px) {
-  .page-header {
+  .header-index {
     background-image: url("../img/index-background.jpg"), linear-gradient(90deg, #fff 50%, #64a83b 50%);
     background-position: calc(50% + 360px) center, center;
     background-repeat: no-repeat;
@@ -66,6 +66,12 @@ body {
 
 .page-header__logo {
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  .page-header__logo {
+    display: flex;
+    margin-top: 25px;
+  }
 }
 
 .page-header__logo-text {
@@ -80,6 +86,7 @@ body {
 @media (min-width: 768px) {
   .page-header__logo-text {
     margin-left: 13px;
+    margin-top: 13px;
   }
 }
 
@@ -91,7 +98,7 @@ body {
 }
 
 .page-header__container {
-  padding: 0;
+  padding-top: 13px;
 }
 @media (min-width: 768px) {
   .page-header__container {
@@ -124,13 +131,12 @@ body {
 
 .main-nav__toogle {
   position: absolute;
-  top: 0;
+  top: -35px;
   right: 0;
   z-index: 1;
   display: block;
-  margin: 35px -55px 0;
-  width: 70px;
-  height: 64px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   border: none;
   background-color: #ffffff;
@@ -144,62 +150,62 @@ body {
   }
 }
 
-.main-nav__logo-wrapper {
-  display: block;
-  margin: 0 auto;
-  padding: 20px 0;
-  justify-content: space-between;
-}
-@media (min-width: 768px) {
-  .main-nav__logo-wrapper {
-    padding-top: 29px;
-    width: 174px;
-    margin: 0;
-  }
-}
-
-.main-nav--closed.main-nav__toogle::before {
+.main-nav--closed.main-nav::before {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 0;
+  top: -23px;
+  right: 5px;
   width: 24px;
   height: 2px;
   background-color: #000000;
   box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+  z-index: 50;
+}
+@media (min-width: 768px) {
+  .main-nav--closed.main-nav::before {
+    display: none;
+  }
 }
 
-.main-nav--closed.main-nav__toggle:active::before {
+.main-nav--closed.main-nav:active::before {
   background-color: fade(#000000, 30%);
   box-shadow: 0 8px 0 0 fade(#000000, 30%), 0 16px 0 0 fade(#000000, 30%);
 }
 
-.main-nav--opened.main-nav__toogle {
+.main-nav--opened.main-nav {
   top: 0;
   left: auto;
   right: 0;
 }
-.main-nav--opened.main-nav__toogle::before, .main-nav--opened.main-nav__toogle::after {
+.main-nav--opened.main-nav::before, .main-nav--opened.main-nav::after {
   content: "";
   position: absolute;
-  top: 24px;
-  right: 18px;
+  top: -30px;
+  right: 5px;
   width: 25px;
   height: 2px;
   background-color: #000000;
+  z-index: 50;
 }
-.main-nav--opened.main-nav__toogle::before {
+.main-nav--opened.main-nav::before {
   transform: rotate(45deg);
   box-shadow: none;
 }
-.main-nav--opened.main-nav__toogle::after {
+.main-nav--opened.main-nav::after {
   transform: rotate(-45deg);
 }
-.main-nav--opened.main-nav__toogle:active::before, .main-nav--opened.main-nav__toogle:active::after {
+.main-nav--opened.main-nav:active::before, .main-nav--opened.main-nav:active::after {
   background-color: fade(#000000, 30%);
 }
 
+@media (max-width: 767px) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+}
+
 .main-nav__list {
+  display: block;
   padding: 0;
 }
 @media (min-width: 768px) {
@@ -226,9 +232,79 @@ body {
   }
 }
 
+.main-nav__link-index {
+  display: block;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  position: relative;
+}
+@media (min-width: 1300px) {
+  .main-nav__link-index {
+    color: #ffffff;
+  }
+}
+.main-nav__link-index:hover {
+  opacity: 0.6;
+}
+.main-nav__link-index:active {
+  opacity: 0.3;
+}
+
+.main-nav__item-index--active .main-nav__link-index {
+  display: block;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .main-nav__item-index--active .main-nav__link-index::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #68b738;
+    bottom: -10px;
+    left: 0;
+  }
+}
+@media (min-width: 1300px) {
+  .main-nav__item-index--active .main-nav__link-index {
+    color: #ffffff;
+  }
+  .main-nav__item-index--active .main-nav__link-index::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    bottom: -10px;
+    left: 0;
+  }
+}
+.main-nav__item-index--active .main-nav__link-index:hover {
+  opacity: 0.6;
+}
+.main-nav__item-index--active .main-nav__link-index:active {
+  opacity: 0.3;
+}
+
 .main-nav__link {
   display: block;
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;
@@ -253,11 +329,6 @@ body {
     text-align: left;
   }
 }
-@media (min-width: 1300px) {
-  .main-nav__link {
-    color: #ffffff;
-  }
-}
 
 @media (min-width: 768px) {
   .main-nav__item--active .main-nav__link::after {
@@ -268,11 +339,6 @@ body {
     background-color: #68b738;
     bottom: -10px;
     left: 0;
-  }
-}
-@media (min-width: 1300px) {
-  .main-nav__item--active .main-nav__link::after {
-    background-color: #ffffff;
   }
 }
 
@@ -289,11 +355,6 @@ body {
   }
 }
 
-@media (max-width: 767px) {
-  .main-nav--closed.main-nav__item {
-    display: none;
-  }
-}
 .main-header__container {
   min-height: 302px;
 }
@@ -419,7 +480,7 @@ body {
 }
 
 .button {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -908,6 +969,11 @@ body {
 }
 
 .work__text {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
   width: 200px;
   margin-bottom: 24px;
   margin-left: 20px;
@@ -1034,7 +1100,7 @@ body {
 }
 
 .contacts__title {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -1063,6 +1129,7 @@ body {
   margin: 0 auto;
   border: none;
   display: block;
+  width: 100%;
 }
 
 .main-footer__wrapper {
@@ -1150,7 +1217,7 @@ body {
 }
 
 .fiter-group__control-label {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -1204,7 +1271,7 @@ body {
 }
 
 .main-title {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 26px;
@@ -1242,7 +1309,7 @@ body {
 }
 
 .catalog__title {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -1270,15 +1337,15 @@ body {
 }
 @media (min-width: 768px) {
   .catalog__products-container {
-    width: 324px;
+    width: 284px;
     grid-template-columns: 1fr;
     row-gap: 34px;
     align-items: center;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1300px) {
   .catalog__products-container {
-    width: 245px;
+    width: 205px;
   }
 }
 
@@ -1351,7 +1418,6 @@ body {
 @media (min-width: 1300px) {
   .catalog__container {
     display: grid;
-    width: 245px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     row-gap: 143px;
@@ -1367,11 +1433,16 @@ body {
 
 .catalog__weight {
   text-align: left;
-  width: 245px;
 }
 @media (min-width: 768px) {
   .catalog__weight {
     border-bottom: 1px solid #cdcdcd;
+    width: 285px;
+  }
+}
+@media (min-width: 1300px) {
+  .catalog__weight {
+    width: 205px;
   }
 }
 
@@ -1446,7 +1517,7 @@ body {
 }
 
 .more__title {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
@@ -1589,7 +1660,7 @@ body {
 }
 
 .form-feedback__title {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 26px;
@@ -1616,7 +1687,7 @@ body {
 .form-feedback__comments-title::after {
   content: "";
   position: absolute;
-  width: 159px;
+  width: 130px;
   height: 2px;
   background-color: #68b738;
   top: 70px;
@@ -1656,13 +1727,13 @@ body {
 }
 
 .form-feedback__textarea {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
   text-align: left;
   border: 1px solid #e7e7e7;
-  width: 100%;
+  width: 95%;
   height: 150px;
   resize: none;
   padding: 14px 15px;
@@ -1671,7 +1742,7 @@ body {
 }
 
 .form-feedback__description {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -1692,7 +1763,7 @@ body {
 
 .form-feedback__label,
 .form-feedback__input {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -1702,7 +1773,7 @@ body {
 }
 
 .form-feedback__input {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -1797,7 +1868,7 @@ body {
 }
 
 .form-feedback__control-label {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -1813,7 +1884,7 @@ body {
 }
 
 .main-comtainer__title {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
@@ -1823,7 +1894,7 @@ body {
 }
 
 .main-container__description {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
