@@ -10,7 +10,7 @@
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
                     url("../img/catalog/catalog-cat.jpg");
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     width: 100%;
   }
 
@@ -35,7 +35,7 @@
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width) {
       top: 0;
-      left: 77px;
+      left: -385px;
     }
   }
 
@@ -43,8 +43,8 @@
     position: absolute;
     margin: 0;
     width: 161px;
-    padding-left: 421px;
     text-align: left;
     top: 80px;
+    right: 100px;
   }
 }

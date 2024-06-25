@@ -40,6 +40,11 @@
     grid-template-columns: 1fr;
     row-gap: 34px;
     align-items: center;
+    background-image: linear-gradient(180deg, #fff 87px, #f2f2f2 87px);
+
+    &:nth-child(8) {
+      background-image: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -54,16 +59,6 @@
     width: 100%;
     flex-direction: column;
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 380px;
-      background-color: #f2f2f2;
-      bottom: -120px;
-      z-index: -1;
-    }
   }
 }
 
@@ -110,7 +105,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    margin-left: 30px;
+
   }
 
   @media (min-width: $desktop-width) {
