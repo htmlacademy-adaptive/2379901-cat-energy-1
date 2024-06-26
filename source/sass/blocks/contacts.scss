@@ -1,8 +1,23 @@
+.contacts {
+  position: relative;
+}
+
 .contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+     padding: 60px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    background-color: #ffffff;
+    top: 95px;
+    left: 110px;
+  }
 }
 
 .contacts__title {
@@ -13,6 +28,7 @@
   text-align: left;
   color: #111111;
   width: 140px;
+  text-transform: uppercase;
 }
 
 .contacts__adress {
@@ -29,3 +45,9 @@
   }
 }
 
+.contacts iframe {
+  margin: 0 auto;
+  border: none;
+  display: block;
+  width: 100%;
+}

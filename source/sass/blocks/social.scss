@@ -1,7 +1,23 @@
 .social__list {
+  padding: 0;
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .social__link {
   text-decoration: none;
+}
+
+.social__icon {
+  fill: #666666;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    fill: #68b738;
+    opacity: 0.3;
+  }
 }

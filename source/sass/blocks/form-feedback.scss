@@ -1,5 +1,6 @@
 .form-feedback__content-wrapper {
   display: block;
+  position: relative;
 
   @media (min-width: $desktop-width) {
     display: grid;
@@ -10,13 +11,86 @@
 
 .form-feedback__title {
   font-family: "Oswald", "Arial", sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 26px;
   text-align: left;
   color: #000000;
   padding-top: 27px;
-  text-align: center;
+  text-align: left;
+  background-color: #ffffff;
+  width: 190px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 73px;
+    height: 2px;
+    background-color: #68b738;
+    top: 440px;
+    right: 0;
+  }
+}
+
+.form-feedback__comments-title {
+  margin-bottom: 38px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 2px;
+    background-color: #68b738;
+    top: 70px;
+  }
+}
+
+.form-feedback_list {
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 19px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid #e7e7e7;
+
+  }
+}
+
+.form-feedback__additional {
+  position: relative;
+}
+
+.form-feedback__contacts {
+  position: relative;
+}
+
+.form-feedback__contacts-title {
+  margin-bottom: 35px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 2px;
+    background-color: #68b738;
+    top: 70px;
+  }
+}
+
+.form-feedback__textarea {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  border: 1px solid #e7e7e7;
+  width: 95%;
+  height: 150px;
+  resize: none;
+  padding: 14px 15px;
+  margin: 0;
+  padding-right: 0;
+
 }
 
 .form-feedback__description {
@@ -26,6 +100,10 @@
   line-height: 18px;
   text-align: left;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .form-feedback_button-container {
@@ -43,7 +121,35 @@
   text-align: left;
   color: #444444;
   text-transform: uppercase;
+}
+
+.form-feedback__input {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  padding: 14px 15px;
+  border: 1px solid #e7e7e7;
+  width: 100%;
+  margin: 0;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+  }
+}
+
+.form-feedback__label {
   margin-right: 13px;
+}
+
+.form-feedback__content {
+  display: flex;
+  align-items: center;
 }
 
 .form-feedback__contacts {
@@ -53,6 +159,8 @@
 }
 
 .form-feedback__comments {
+  position: relative;
+
   @media (min-width: $desktop-width) {
     grid-column: span 2;
   }
@@ -61,5 +169,69 @@
 .form-feedback__additional {
   @media (min-width: $desktop-width) {
     grid-column: span 2;
+  }
+}
+
+.form-feedback__fieldset {
+  border: none;
+  margin: 0;
+}
+
+.form-feedback__item {
+  list-style-type: none;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 27px;
+  }
+}
+
+.form-feedback__control {
+  position: relative;
+}
+
+.form-feedback__control-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+  top: -8px;
+  left: -40px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #bababa;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.form-feedback__control-input[type="radio"]:checked + .form-feedback__control-mark::before{
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  width: 13px;
+  height: 13px;
+  background-color: #68b738;
+  border-radius: 50%;
+}
+
+.form-feedback__control-label {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #444444;
+  text-transform: uppercase;
+}
+
+.form-feedback__button-container {
+  @media (min-width: $tablet-width) {
+    display: flex;
   }
 }

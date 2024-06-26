@@ -18,19 +18,47 @@
   color: #222222;
   text-transform: uppercase;
   margin-bottom: 14px;
+  width: 76px;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    width: 125px;
+    margin-bottom: 20px;
+  }
 }
 
 .catalog__products-container {
   display: grid;
   margin: 0;
-  padding: 0;
+  padding: 20px 20px 25px 20px;
+  align-items: end;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 25px;
 
   @media (min-width: $tablet-width) {
-    width: 324px;
+    width: 284px;
+    grid-template-columns: 1fr;
+    row-gap: 34px;
+    align-items: center;
+    background-image: linear-gradient(180deg, #fff 87px, #f2f2f2 87px);
+
+    &:nth-child(8) {
+      background-image: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    width: 245px;
+    width: 205px;
+  }
+}
+
+.catalog__product-info {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
   }
 }
 
@@ -43,6 +71,12 @@
   color: #444444;
   display: grid;
   grid-template-columns: repeat(2, 80px);
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
 }
 
 .catalog__products-title {
@@ -71,11 +105,59 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    margin-left: 30px;
+
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(4, 245px);
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 143px;
+    margin: 0;
   }
+}
+
+.catalog__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog__weight {
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid #cdcdcd;
+    width: 285px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 205px;
+  }
+}
+
+.catalog__meaning {
+  text-align: right;
+}
+
+.catalog__button {
+  grid-column: 1/-1;
+}
+
+.catalog__product-more {
+  display: flex;
+  padding: 25px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  @media (min-width: $tablet-width) {
+    border: 2px solid #f2f2f2;
+  }
+}
+
+.catalog__product-button {
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
 }

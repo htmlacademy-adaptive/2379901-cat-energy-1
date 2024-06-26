@@ -22,6 +22,7 @@
   @media (min-width: $tablet-width) {
     width: 230px;
     height: 280px;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop-width) {
@@ -33,10 +34,10 @@
   @media (min-width: $tablet-width) {
     counter-increment: number 1;
     content: counter(number);
-    right: 0;
-    top: 0;
+    right: 5px;
+    top: -40px;
     position: absolute;
-    font-family: "Oswald";
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 280px;
     font-weight: 400;
     line-height: 280px;
@@ -47,9 +48,22 @@
 }
 
 .work__text {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
   width: 200px;
   margin-bottom: 24px;
   margin-left: 20px;
+  position: relative;
+  padding-left: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0;
+    padding-top: 70px;
+  }
 }
 
 .work__image {
@@ -60,5 +74,75 @@
 .work__wrapper {
   @media (min-width: $tablet-width) {
     margin-left: 30px;
+  }
+}
+
+.work__title {
+  text-align: left;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 32px;
+  }
+}
+
+.description-one::before {
+  content: url("../img/work-1.svg");
+  position: absolute;
+  top: 15px;
+  left: -3px;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    left: 18px;
+  }
+}
+
+.description-two::before {
+  content: url("../img/work-2.svg");
+  position: absolute;
+  top: 15px;
+  left: -3px;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    left: 19px;
+  }
+}
+
+.description-three::before {
+  content: url("../img/work-3.svg");
+  position: absolute;
+  top: 15px;
+  left: -3px;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    left: 19px;
+  }
+}
+
+.description-four::before {
+  content: url("../img/work-4.svg");
+  position: absolute;
+  top: 15px;
+  left: -3px;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    left: 19px;
+  }
+}
+
+.work__text::after {
+  content: "";
+  position: absolute;
+  background-color: #68b738;
+  width: 60px;
+  height: 60px;
+  top: -2px;
+  left: -20px;
+
+  @media (min-width: $tablet-width) {
+    left: 3px;
   }
 }
