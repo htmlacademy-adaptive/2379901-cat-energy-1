@@ -120,7 +120,7 @@ body {
 @media (min-width: 768px) {
   .main-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
   }
 }
 @media (min-width: 1300px) {
@@ -133,7 +133,7 @@ body {
   position: absolute;
   top: -35px;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   display: block;
   width: 30px;
   height: 30px;
@@ -150,10 +150,10 @@ body {
   }
 }
 
-.main-nav--closed.main-nav::before {
+.main-nav--closed .main-nav__toogle::before {
   content: "";
   position: absolute;
-  top: -23px;
+  top: 13px;
   right: 5px;
   width: 24px;
   height: 2px;
@@ -162,44 +162,44 @@ body {
   z-index: 50;
 }
 @media (min-width: 768px) {
-  .main-nav--closed.main-nav::before {
+  .main-nav--closed .main-nav__toogle::before {
     display: none;
   }
 }
 
-.main-nav--closed.main-nav:active::before {
+.main-nav--closed .main-nav__toogle:active::before {
   background-color: fade(#000000, 30%);
   box-shadow: 0 8px 0 0 fade(#000000, 30%), 0 16px 0 0 fade(#000000, 30%);
 }
 
-.main-nav--opened.main-nav {
-  top: 0;
+.main-nav--opened .main-nav__toogle {
+  top: -30px;
   left: auto;
-  right: 0;
+  right: 10px;
 }
-.main-nav--opened.main-nav::before, .main-nav--opened.main-nav::after {
+.main-nav--opened .main-nav__toogle::before, .main-nav--opened .main-nav__toogle::after {
   content: "";
   position: absolute;
-  top: -30px;
+  top: 15px;
   right: 5px;
   width: 25px;
   height: 2px;
   background-color: #000000;
   z-index: 50;
 }
-.main-nav--opened.main-nav::before {
+.main-nav--opened .main-nav__toogle::before {
   transform: rotate(45deg);
   box-shadow: none;
 }
-.main-nav--opened.main-nav::after {
+.main-nav--opened .main-nav__toogle::after {
   transform: rotate(-45deg);
 }
-.main-nav--opened.main-nav:active::before, .main-nav--opened.main-nav:active::after {
+.main-nav--opened .main-nav__toogle:active::before, .main-nav--opened .main-nav__toogle:active::after {
   background-color: fade(#000000, 30%);
 }
 
 @media (max-width: 767px) {
-  .main-nav--closed .main-nav__list {
+  .main-nav--closed .main-nav__item {
     display: none;
   }
 }
@@ -342,6 +342,19 @@ body {
   }
 }
 
+.main-nav--opened .main-nav__wrapper {
+  position: absolute;
+}
+
+.main-nav--closed .main-nav__wrapper {
+  position: absolute;
+}
+
+.main-nav__wrapper {
+  z-index: 1;
+  background-color: #ffffff;
+  width: 280px;
+}
 @media (min-width: 768px) {
   .main-nav__wrapper {
     width: 436px;
@@ -352,7 +365,21 @@ body {
   .main-nav__wrapper {
     width: 475px;
     margin-left: auto;
+    background: none;
   }
+}
+
+.main-nav--nojs .main-nav__toogle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .main-nav__item {
+  display: block;
 }
 
 .main-header__container {
@@ -958,7 +985,7 @@ body {
     right: 5px;
     top: -40px;
     position: absolute;
-    font-family: "Oswald";
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 280px;
     font-weight: 400;
     line-height: 280px;
@@ -1341,6 +1368,10 @@ body {
     grid-template-columns: 1fr;
     row-gap: 34px;
     align-items: center;
+    background-image: linear-gradient(180deg, #fff 87px, #f2f2f2 87px);
+  }
+  .catalog__products-container:nth-child(8) {
+    background-image: none;
   }
 }
 @media (min-width: 1300px) {
@@ -1356,15 +1387,6 @@ body {
     width: 100%;
     flex-direction: column;
     position: relative;
-  }
-  .catalog__product-info::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 380px;
-    background-color: #f2f2f2;
-    bottom: -120px;
-    z-index: -1;
   }
 }
 
@@ -1412,7 +1434,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    margin-left: 30px;
   }
 }
 @media (min-width: 1300px) {
@@ -1585,7 +1606,7 @@ body {
   padding-bottom: 43px;
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/catalog-cat.jpg");
 }
-@media (min-width: 768px) and (max-width: 1300px) {
+@media (min-width: 768px) {
   .gift {
     width: 100%;
   }
@@ -1611,7 +1632,7 @@ body {
 @media (min-width: 768px) and (max-width: 1300px) {
   .gift__description::after {
     top: 0;
-    left: 77px;
+    left: -385px;
   }
 }
 @media (min-width: 768px) and (max-width: 1300px) {
@@ -1619,9 +1640,9 @@ body {
     position: absolute;
     margin: 0;
     width: 161px;
-    padding-left: 421px;
     text-align: left;
     top: 80px;
+    right: 100px;
   }
 }
 
