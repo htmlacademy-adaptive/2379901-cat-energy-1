@@ -12,8 +12,17 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    background-position: 50% 60%;
+    background-size: cover;
   }
 
+  @media (min-width: $desktop-width) {
+
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/catalog/catalog-cat-2x.jpg");
+  }
 }
 
 .gift__description {

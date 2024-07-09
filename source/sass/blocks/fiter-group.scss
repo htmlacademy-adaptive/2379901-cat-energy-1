@@ -34,15 +34,20 @@
 }
 
 .fiter-group__title {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
+  padding: 30px 20px 20px 20px;
+  background-color: #ffffff;
+  width: 141px;
+
   &::after {
     content: "";
     position: absolute;
-    width: 109px;
+    width: 1000%;
     height: 2px;
     background-color: #68b738;
-    top: 40px;
-    right: 0;
+    top: 70px;
+    left: -500px;
+    z-index: -1;
   }
 }
 

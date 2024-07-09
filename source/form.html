@@ -12,7 +12,11 @@
   <header class="page-header header-other">
     <div class="page-header__container content-wrapper">
       <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Кэт энерджи">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-desctop.svg" width="59" heigth="70">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="50" heigth="60">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Кэт энерджи">
+        </picture>
         <img class="page-header__logo-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
       </a>
       <nav class="main-nav main-nav--opened">
