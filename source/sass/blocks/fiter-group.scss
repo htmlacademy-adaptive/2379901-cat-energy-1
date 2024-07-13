@@ -35,19 +35,33 @@
 
 .fiter-group__title {
   margin-bottom: 30px;
-  padding: 30px 20px 20px 20px;
-  background-color: #ffffff;
+  padding: 0 20px;
   width: 141px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 2px;
+    background-color: #68b738;
+    top: 14px;
+    right: 0;
+    z-index: -1;
+    box-shadow: 100vw 0 #68b738;
+  }
 
   &::after {
     content: "";
+    display: block;
     position: absolute;
-    width: 1000%;
-    height: 2px;
-    background-color: #68b738;
-    top: 70px;
-    left: -500px;
     z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
   }
 }
 
