@@ -52,31 +52,20 @@ body {
   }
 }
 
-.header-index {
+.page-header__index {
   display: block;
   margin: 0 auto;
   position: relative;
 }
 @media (min-width: 1300px) {
-  .header-index {
-    background-image: url("../img/index-background-desktop.jpg");
-    background-position: 100% 50%;
+  .page-header__index {
+    background-image: url("../img/index-background-desktop.jpg"), linear-gradient(90deg, #fff 50%, rgba(104, 183, 56, 0.85) 50%);
+    background-position: calc(50% + 360px) center, center;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .header-index::before {
-    content: "";
-    position: absolute;
-    background: linear-gradient(90deg, #fff 50%, rgba(104, 183, 56, 0.85) 50%);
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    top: 0;
-    left: -1;
   }
 }
 @media (min-width: 1300px) and (mni-resolution: 2dppx) {
-  .header-index {
+  .page-header__index {
     background-image: url("../img/index-background-desktop-x2.jpg");
   }
 }
@@ -1350,19 +1339,32 @@ body {
 
 .fiter-group__title {
   margin-bottom: 30px;
-  padding: 30px 20px 20px 20px;
-  background-color: #ffffff;
+  padding: 0 20px;
   width: 141px;
+  position: relative;
+}
+.fiter-group__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 2px;
+  background-color: #68b738;
+  top: 14px;
+  right: 0;
+  z-index: -1;
+  box-shadow: 100vw 0 #68b738;
 }
 .fiter-group__title::after {
   content: "";
+  display: block;
   position: absolute;
-  width: 1000%;
-  height: 2px;
-  background-color: #68b738;
-  top: 70px;
-  left: -500px;
   z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
 }
 
 .fiter-group__control {
@@ -1800,6 +1802,13 @@ body {
   }
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .form-feedback__programs {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+
 .form-feedback__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
@@ -1812,57 +1821,41 @@ body {
   background-color: #ffffff;
   width: 190px;
 }
-.form-feedback__title::after {
-  content: "";
-  position: absolute;
-  width: 73px;
-  height: 2px;
-  background-color: #68b738;
-  top: 440px;
-  right: 0;
-}
 
 .form-feedback__comments-title {
-  margin-bottom: 30px;
-  padding: 30px 20px 20px 20px;
-  background-color: #ffffff;
-  width: 121px;
+  margin: 0 0 30px 0;
+  padding: 0 20px;
+  position: relative;
+  width: 120px;
+}
+.form-feedback__comments-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 2px;
+  background-color: #68b738;
+  top: 14px;
+  right: 0;
+  z-index: -1;
+  box-shadow: 100vw 0 #68b738;
 }
 .form-feedback__comments-title::after {
   content: "";
+  display: block;
   position: absolute;
-  width: 1000%;
-  height: 2px;
-  background-color: #68b738;
-  top: 70px;
-  left: -500px;
   z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
 }
 
 .form-feedback_list {
   margin: 0;
   padding-top: 22px;
   padding-bottom: 19px;
-}
-@media (min-width: 320px) and (max-width: 768px) {
-  .form-feedback_list::after {
-    content: "";
-    position: absolute;
-    width: 1000%;
-    height: 1px;
-    background-color: #d9d9d9;
-    left: -230px;
-    top: 230px;
-  }
-  .form-feedback_list::before {
-    content: "";
-    position: absolute;
-    width: 1000%;
-    height: 1px;
-    background-color: #d9d9d9;
-    left: -230px;
-    top: 380px;
-  }
 }
 @media (min-width: 768px) {
   .form-feedback_list {
@@ -1879,19 +1872,32 @@ body {
 }
 
 .form-feedback__contacts-title {
-  margin: 0;
-  padding: 20px 20px 20px 20px;
-  background-color: #ffffff;
+  margin-bottom: 38px;
+  padding: 0 20px;
+  position: relative;
+}
+.form-feedback__contacts-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 2px;
+  background-color: #68b738;
+  top: 14px;
+  right: 0;
+  z-index: -1;
+  box-shadow: 100vw 0 #68b738;
 }
 .form-feedback__contacts-title::after {
   content: "";
+  display: block;
   position: absolute;
-  width: 1000%;
-  height: 2px;
-  background-color: #68b738;
-  top: 70px;
-  left: -500px;
   z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
 }
 
 .form-feedback__textarea {
