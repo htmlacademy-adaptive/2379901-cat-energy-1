@@ -59,14 +59,15 @@ body {
 }
 @media (min-width: 1300px) {
   .page-header__index {
-    background-image: url("../img/index-background-desktop.jpg"), linear-gradient(90deg, #fff 50%, rgba(104, 183, 56, 0.85) 50%);
-    background-position: calc(50% + 360px) center, center;
+    background-image: url("../img/index-background-x1.jpg");
+    background-position: calc(50% + 460px) center, center;
     background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 @media (min-width: 1300px) and (mni-resolution: 2dppx) {
   .page-header__index {
-    background-image: url("../img/index-background-desktop-x2.jpg");
+    background-image: url("../img/index-background_x2.jpg");
   }
 }
 
@@ -611,6 +612,11 @@ body {
   .purpose__item {
     margin-top: 30px;
     padding: 53px 77px;
+  }
+}
+@media (min-width: 1300px) {
+  .purpose__item {
+    width: 410px;
   }
 }
 
