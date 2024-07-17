@@ -1,17 +1,23 @@
-.header-index {
+.page-header__index {
   display: block;
   margin: 0 auto;
+  position: relative;
 
   @media (min-width: $desktop-width) {
-    background-image: url("../img/index-background.jpg"),
-                      linear-gradient(90deg, #fff 50%, #64a83b 50%);
-    background-position: calc(50% + 360px) center,center;
+    background-image: url("../img/index-background-x1.jpg");
+    background-position: calc(50% + 460px) center,center;
     background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (mni-resolution: 2dppx) {
+      background-image: url("../img/index-background_x2.jpg");
+    }
   }
 }
 
 .page-header__logo {
   text-decoration: none;
+  z-index: 100;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -21,6 +27,7 @@
 
 .page-header__logo-text {
   margin-left: 56px;
+  z-index: 100;
 
   &:hover {
     opacity: 0.6;
@@ -48,6 +55,7 @@
 
 .page-header__container {
   padding-top: 13px;
+  z-index: 100;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -58,4 +66,5 @@
 
 .page-header__catalog {
   background: none;
+  z-index: 100;
 }
