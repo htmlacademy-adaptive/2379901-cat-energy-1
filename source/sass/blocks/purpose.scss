@@ -24,6 +24,10 @@
     margin-top: 30px;
     padding: 53px 77px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 410px;
+  }
 }
 
 .purpose__title {
